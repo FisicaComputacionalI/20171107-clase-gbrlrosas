@@ -1,0 +1,36 @@
+//programa que evalua la calificacion de un alumno
+//un 10 = 100
+//un error de .5
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int examen;
+  cout<<"dame un valor entre 100,90,80,70,60,50,40,30,20,10"<<endl;
+  float tarea;
+  cout<<"si tiene tarea anota 1 si no 0"<<endl;
+  float participacion=1;
+  cout<<"si tiene participacion anota1 si no 0"<<endl;
+  float sum;
+  cin>>examen;
+  cin>>tarea;
+  cin>>participacion;
+  switch(examen){
+    case 100: if(tarea+participacion==0){sum=examen;cout<<"calificacion es"<<sum<<endl;}else{if(tarea==0){sum=(((850/10*examen)/10)+150)/10;cout<<"calificacion es"<<sum<<endl;}
+		else{if(participacion==0){sum=(((850/10*examen)/10)+150)/10;cout<<"calificacion es"<<sum<<endl;}else{if(tarea+participacion==2){sum=(((700/10*examen)/10)+300)/10;cout<<"calificacion es"<<sum<<endl;}}}}break;
+    case 90: if(tarea+participacion==0){sum=examen;cout<<"calificacion es"<<sum<<endl;}else{if(tarea==0){sum=(((850/10*examen)/10)+150)/10;cout<<"calificacion es"<<sum<<endl;}
+		else{if(participacion==0){sum=(((850/10*examen)/10)+150)/10;cout<<"calificacion es"<<sum<<endl;}else{if(tarea+participacion==2){sum=(((700/10*examen)/10)+300)/10;cout<<"calificacion es"<<sum<<endl;}}}}break;
+    case 80:  if(tarea+participacion==0){sum=examen;cout<<"calificacion es"<<sum<<endl;}else{if(tarea==0){sum=(((850/10*examen)/10)+150)/10;cout<<"calificacion es"<<sum<<endl;}
+		else{if(participacion==0){sum=(((850/10*examen)/10)+150)/10;cout<<"calificacion es"<<sum<<endl;}else{if(tarea+participacion==2){sum=(((700/10*examen)/10)+300)/10;cout<<"calificacion es"<<sum<<endl;}}}}break;
+    case 70: sum=(((700/10*examen)/10)+150*tarea+150*participacion)/10;cout<<"calificacion es"<<sum<<endl; break;
+    case 60: sum=(((700/10*examen)/10)+150*tarea+150*participacion)/10;cout<<"calificacion es"<<sum<<endl; break;
+    case 50: sum=(((700/10*examen)/10)+150*tarea+150*participacion)/10;cout<<"calificacion es"<<sum<<endl; break;
+	case 40: sum=(((700/10*examen)/10)+150*tarea+150*participacion)/10;cout<<"calificacion es"<<sum<<endl; break;
+	case 30: sum=(((700/10*examen)/10)+150*tarea+150*participacion)/10;cout<<"calificacion es"<<sum<<endl; break;
+    case 20: sum=(((700/10*examen)/10)+150*tarea+150*participacion)/10;cout<<"calificacion es"<<sum<<endl; break;
+	case 10: sum=(((700/10*examen)/10)+150*tarea+150*participacion)/10;cout<<"calificacion es"<<sum<<endl; break;
+	default:cout<<"opcion no valida"<<endl;
+	}
+  return 0;
+}
